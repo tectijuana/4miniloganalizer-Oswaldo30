@@ -161,6 +161,11 @@ Comprender cómo un problema de procesamiento de datos es implementado a nivel m
 
 ---
 
+## EVIDENCIA DE COMPILACIÓN Y EJECUCIÓN 
+
+<img width="987" height="294" alt="imagen" src="https://github.com/user-attachments/assets/2136c005-cdf8-4594-af95-fc9424f6eaf1" />
+
+
 ## Nota
 
 Aunque este problema puede resolverse fácilmente en lenguajes de alto nivel, el propósito de la práctica es implementar **cómo lo resolvería la arquitectura**, no únicamente obtener el resultado.
