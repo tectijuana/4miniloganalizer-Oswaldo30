@@ -136,6 +136,11 @@ Comprender cómo un problema de procesamiento de datos es implementado a nivel m
 
 La imagen muestra la ejecución exitosa del programa "Mini Cloud Log Analyzer" en una terminal de AWS. Tras verificar que el código fuente ya está correctamente compilado, se ejecuta el programa pasándole como entrada el archivo de pruebas data/logs_B.txt. Como resultado, el analizador procesa todos los datos e imprime un reporte que contabiliza 91 códigos de éxito (2xx), 132 errores de cliente (4xx) y 103 errores de servidor (5xx), logrando además identificar de manera precisa que el código 404 fue el más frecuente de todo el archivo.
 
+
+### EVIDENCIA ASCIINEMA
+
+https://asciinema.org/a/UdXekGuc2eATDSLm
+
 ## Nota
 
 Aunque este problema puede resolverse fácilmente en lenguajes de alto nivel, el propósito de la práctica es implementar **cómo lo resolvería la arquitectura**, no únicamente obtener el resultado.
