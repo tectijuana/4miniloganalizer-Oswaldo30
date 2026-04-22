@@ -1,5 +1,9 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/EbtZGzoI)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23682712)
 
 # Práctica 1
+
+## Alumno: Gutierrez Morales Oswaldo
 
 ## Implementación de un Mini Cloud Log Analyzer en ARM64
 
@@ -11,9 +15,10 @@
 
 ## Introducción
 
-Los sistemas modernos de cómputo en la nube generan continuamente registros (*logs*) que permiten monitorear el estado de servicios, detectar fallas y activar alertas ante eventos críticos.
+En esta fase del proyecto "Mini Cloud Log Analyzer", partimos de un programa base en Ensamblador ARM64 diseñado para procesar registros de un servidor web. 
+La funcionalidad original permitía leer un flujo de texto con códigos de estado HTTP y agruparlos en categorías generales (Éxitos 2xx, Errores de cliente 4xx y Errores de servidor 5xx).
 
-En esta práctica se desarrollará un módulo simplificado de análisis de logs, implementado en **ARM64 Assembly**, inspirado en tareas reales de monitoreo utilizadas en sistemas cloud, observabilidad y administración de infraestructura.
+El objetivo principal de la Variante B fue dotar al programa de una capacidad de análisis estadístico más precisa: identificar cuál fue el código exacto que más se repitió en el registro.
 
 El programa procesará códigos de estado HTTP suministrados mediante entrada estándar (stdin):
 
@@ -25,7 +30,7 @@ cat logs.txt | ./analyzer
 
 ## Objetivo general
 
-Diseñar e implementar, en lenguaje ensamblador ARM64, una solución para procesar registros de eventos y detectar condiciones definidas según la variante asignada.
+Desarrollar una herramienta de análisis de registros de servidor web (Mini Cloud Log Analyzer) en lenguaje Ensamblador ARM64, empleando exclusivamente llamadas al sistema (syscalls) de Linux, con el fin de procesar flujos de texto, clasificar códigos de estado HTTP por categorías e identificar estadísticamente el código más recurrente.
 
 ---
 
@@ -62,45 +67,11 @@ El estudiante deberá completar la lógica correspondiente.
 
 ---
 
-## Variantes de la práctica
-
-### Variante A
-
-Contabilizar:
-
-* respuestas exitosas (2xx)
-* errores del cliente (4xx)
-* errores del servidor (5xx)
-
----
+## Variante de mi práctica
 
 ### Variante B
 
 Determinar el código de estado más frecuente.
-
----
-
-### Variante C
-
-Detectar el primer evento crítico (503).
-
----
-
-### Variante D
-
-Detectar tres errores consecutivos.
-
----
-
-### Variante E
-
-Calcular índice de salud:
-
-```text id="2u4vvx"
-Health Score = 100 - (errores × 10)
-```
-
----
 
 ## Compilación
 
@@ -158,6 +129,17 @@ No está permitido:
 Comprender cómo un problema de procesamiento de datos es implementado a nivel máquina mediante instrucciones ARM64.
 
 ---
+
+## EVIDENCIA DE COMPILACIÓN Y EJECUCIÓN 
+
+<img width="987" height="294" alt="imagen" src="https://github.com/user-attachments/assets/2136c005-cdf8-4594-af95-fc9424f6eaf1" />
+
+La imagen muestra la ejecución exitosa del programa "Mini Cloud Log Analyzer" en una terminal de AWS. Tras verificar que el código fuente ya está correctamente compilado, se ejecuta el programa pasándole como entrada el archivo de pruebas data/logs_B.txt. Como resultado, el analizador procesa todos los datos e imprime un reporte que contabiliza 91 códigos de éxito (2xx), 132 errores de cliente (4xx) y 103 errores de servidor (5xx), logrando además identificar de manera precisa que el código 404 fue el más frecuente de todo el archivo.
+
+
+### EVIDENCIA ASCIINEMA
+
+https://asciinema.org/a/UdXekGuc2eATDSLm
 
 ## Nota
 
