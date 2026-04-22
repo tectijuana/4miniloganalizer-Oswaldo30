@@ -3,6 +3,8 @@
 
 # Práctica 1
 
+## Alumno: Gutierrez Morales Oswaldo
+
 ## Implementación de un Mini Cloud Log Analyzer en ARM64
 
 **Modalidad:** Individual
@@ -13,9 +15,10 @@
 
 ## Introducción
 
-Los sistemas modernos de cómputo en la nube generan continuamente registros (*logs*) que permiten monitorear el estado de servicios, detectar fallas y activar alertas ante eventos críticos.
+En esta fase del proyecto "Mini Cloud Log Analyzer", partimos de un programa base en Ensamblador ARM64 diseñado para procesar registros de un servidor web. 
+La funcionalidad original permitía leer un flujo de texto con códigos de estado HTTP y agruparlos en categorías generales (Éxitos 2xx, Errores de cliente 4xx y Errores de servidor 5xx).
 
-En esta práctica se desarrollará un módulo simplificado de análisis de logs, implementado en **ARM64 Assembly**, inspirado en tareas reales de monitoreo utilizadas en sistemas cloud, observabilidad y administración de infraestructura.
+El objetivo principal de la Variante B fue dotar al programa de una capacidad de análisis estadístico más precisa: identificar cuál fue el código exacto que más se repitió en el registro.
 
 El programa procesará códigos de estado HTTP suministrados mediante entrada estándar (stdin):
 
@@ -27,7 +30,7 @@ cat logs.txt | ./analyzer
 
 ## Objetivo general
 
-Diseñar e implementar, en lenguaje ensamblador ARM64, una solución para procesar registros de eventos y detectar condiciones definidas según la variante asignada.
+Desarrollar una herramienta de análisis de registros de servidor web (Mini Cloud Log Analyzer) en lenguaje Ensamblador ARM64, empleando exclusivamente llamadas al sistema (syscalls) de Linux, con el fin de procesar flujos de texto, clasificar códigos de estado HTTP por categorías e identificar estadísticamente el código más recurrente.
 
 ---
 
@@ -64,45 +67,11 @@ El estudiante deberá completar la lógica correspondiente.
 
 ---
 
-## Variantes de la práctica
-
-### Variante A
-
-Contabilizar:
-
-* respuestas exitosas (2xx)
-* errores del cliente (4xx)
-* errores del servidor (5xx)
-
----
+## Variante de mi práctica
 
 ### Variante B
 
 Determinar el código de estado más frecuente.
-
----
-
-### Variante C
-
-Detectar el primer evento crítico (503).
-
----
-
-### Variante D
-
-Detectar tres errores consecutivos.
-
----
-
-### Variante E
-
-Calcular índice de salud:
-
-```text id="2u4vvx"
-Health Score = 100 - (errores × 10)
-```
-
----
 
 ## Compilación
 
