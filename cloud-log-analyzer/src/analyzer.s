@@ -2,6 +2,8 @@
 ===============================================================================
 MINI CLOUD LOG ANALYZER (Variante B)
 ===============================================================================
+ALUMNO: Gutierrez Morales Oswaldo
+FECHA: 22 de Abril del 2026
 Propósito:
 Lee una lista de códigos de estado HTTP (ej. 200, 404, 500).
 1. Cuenta cuántos son Éxitos (2xx), Errores de cliente (4xx) y de servidor (5xx).
